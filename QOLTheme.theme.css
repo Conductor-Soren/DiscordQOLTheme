@@ -15,16 +15,6 @@
 /*2 Layer Bar*/
 @import url(https://davart154.github.io/Themes/Snippets/Two-Row%20Chat%20Bar%20Layout/TwoRowChatBar.css);
 
-/*Bubbles*/
-/*@import url(https://blade04208.github.io/ddex4/src/bubbles.css);*/
-
-/*SMS Message*/
-/*@import url("https://raw.githubusercontent.com/LuSaffi/VenCordstuff/refs/heads/main/CSS/selfMessages.css");
-:root{
-  --selfMessageColor: #ffffff75;
-  --defaultMessageColor: #212327d2;
-}*/
-
 /*Better Member Count*/
 .vc-membercount-member-list {
   justify-content: space-between !important;
