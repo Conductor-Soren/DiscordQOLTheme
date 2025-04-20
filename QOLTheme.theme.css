@@ -1,0 +1,227 @@
+/**
+ * @name QOL Theme
+ * @author Conductor Soren
+ * @authorLink https://github.com/Conductor-Soren
+ * @version 1.0
+ * @description QOL Minor Tweaks
+ * @source https://github.com/Conductor-Soren/DiscordQOLTheme
+ * @website https://github.com/Conductor-Soren/DiscordQOLTheme
+ * @invite 79uthN32RW
+*/
+
+/*No Title Bar*/
+@import url('https://raw.githubusercontent.com/surgedevs/visual-refresh-compact-title-bar/refs/heads/main/desktop.css');
+
+/*2 Layer Bar*/
+@import url(https://davart154.github.io/Themes/Snippets/Two-Row%20Chat%20Bar%20Layout/TwoRowChatBar.css);
+
+/*Bubbles*/
+/*@import url(https://blade04208.github.io/ddex4/src/bubbles.css);*/
+
+/*SMS Message*/
+/*@import url("https://raw.githubusercontent.com/LuSaffi/VenCordstuff/refs/heads/main/CSS/selfMessages.css");
+:root{
+  --selfMessageColor: #ffffff75;
+  --defaultMessageColor: #212327d2;
+}*/
+
+/*Better Member Count*/
+.vc-membercount-member-list {
+  justify-content: space-between !important;
+  margin-top: 0 !important;
+  padding-inline: 0 !important;
+  background: var(--bg-overlay-4,var(--background-base-lowest));
+  border-bottom: 1.5px solid var(--border-subtle);
+  border-right: 1.5px solid var(--border-subtle);
+  margin-bottom: -16px !important;
+
+  .vc-membercount-online-dot, .vc-membercount-total-dot { margin: 0 !important; }
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 0;
+    
+    &::after {
+      display: inline;
+      font-size: 0.8em;
+      margin-top: 2px;
+    }
+    &:nth-child(1) { margin-left: 20px; }
+    &:nth-child(1)::after {
+      content: "online";
+      color: var(--color-online);
+    }
+    &:nth-child(3) { padding-right: 20px; }
+    &:nth-child(3)::after {
+      content: "total";
+      color: var(--color-total);
+    }
+  }
+}
+
+/*gradient server images*/
+.iconContainerWithGuildIcon__2ea32 {
+    .icon__2894c {
+        margin-left: 0px;
+        margin-top: 0px;
+        width: 20px;
+        height: 20px;
+        background: none !important;
+
+        >path {
+            filter: drop-shadow(-1px 0 0px var(--background-base-lowest)) drop-shadow(1px 0 0px var(--background-base-lowest)) drop-shadow(0px 1px 0px var(--background-base-lowest)) drop-shadow(0px -1px 0px var(--background-base-lowest));
+        }
+    }
+
+    .svg__2338f {
+        position: absolute;
+        top: -6px;
+        left: -10px;
+        overflow: visible !important;
+        width: calc(28px + var(--space-xxs) + var(--space-xxs));
+        height: calc(28px + var(--space-xxs) + var(--space-xxs));
+        contain: none;
+
+        foreignObject {
+            mask: none !important;
+            overflow: hidden !important;
+            border-radius: var(--radius-sm) 0 0 var(--radius-sm) !important;
+            width: calc(28px + var(--space-xxs) + var(--space-xxs)) !important;
+
+            .channelGuildIcon__2894c {
+                position: absolute;
+                top: calc(0px - var(--space-xxs) - var(--space-xxs));
+                width: calc(28px + var(--space-xxs) + var(--space-xxs)) !important;
+                height: calc(28px + var(--space-xxs) + var(--space-xxs)) !important;
+                mask-image: linear-gradient(to right, black 0%, transparent 100%);
+                border-radius: 0px !important;
+            }
+        }
+
+
+    }
+}
+
+.modeSelected__2ea32 .iconWithGuildIcon__2ea32 {
+    color: var(--header-primary)
+}
+
+/*Detailed Timestamp*/
+span[class*="timestampInline_"] time::before {
+  content: attr(aria-label);
+  font-size: 12px;
+}
+
+span[class*="timestampInline_"] {
+  font-size: 0px !important;
+}
+
+/*Colapisble Panel*/
+.panels_c48ade {
+  left: var(--space-sm)!important;
+  height: 57px!important;
+  width: 56px!important;
+  border-radius: 30px!important;
+  display: flex!important;
+  flex-direction: column;
+  overflow: hidden;
+  transition-duration: 0.35s;
+  z-index: 50000;
+  pointer-events: all;
+  margin-left: 70px ;
+  border: 1px solid var(--border-subtle)!important;
+ &:has(.container_e131a9) {
+  border: 1px solid var(--border-normal);
+ }
+}
+
+.wrapper_e131a9 {
+  height: 0;
+  overflow: hidden;
+}
+
+.panels_c48ade:hover {
+  width: 325px!important;
+  height: auto!important;
+  display: flex!important;
+  flex-direction: column;
+  border-radius: 15px!important;
+  filter: drop-shadow(7px 7px 7px rgba(0, 0, 0, 0.123)) ;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  .wrapper_e131a9 {
+    height: auto!important;
+  }
+}
+.sidebar_c48ade {
+  overflow: visible!important;
+}
+.container__2637a {
+  padding-bottom: 0px!important;
+}
+.scroller__99e7c {
+  margin-bottom: 0px!important;
+}
+.bottom__7aaec {
+  bottom: 0px!important;
+}
+
+.visual-refresh .wrapper_ef3116 {
+  margin-bottom: 0;
+}
+
+.visual-refresh [class^="panels_"] [class^="container__"] [class^="buttons__"] {
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: left;
+  transition: opacity 0.1s ease-in, transform 0.1s ease-in;
+  will-change: opacity, transform;
+}
+
+.visual-refresh [class^="panels_"]:hover [class^="container__"] [class^="buttons__"] {
+
+  transform: scale(1);
+  
+  opacity: 1;
+}
+
+.visual-refresh .panel__5dec7 {
+  display: none;
+}
+
+.visual-refresh [class^="panels_"]:hover .panel__5dec7 {
+  display: block;
+}
+
+/* Hide nameplates */
+[style^="background: linear-gradient(90deg"]:has([src*="/nameplates/"]) { display: none; }
+[class*="dm_"]:has([class*="linkPlated_"]) {
+    & [class*="linkPlated_"] { padding-right: var(--space-16); }
+    & [class*="closeButtonPlated_"] {
+        opacity: 0.7;
+        &:hover { opacity: 1; }
+        & [class^="innerCloseButtonPlated"] {
+            opacity: unset; 
+            background: none;
+            & svg {
+                color: inherit;
+                &:is(:hover, :focus-within) { color: var(--interactive-hover); }
+            }
+        }
+    }
+}
+
+/*Hide Activity Status*/
+[class*='membersGroup']:has([role=button]),
+[class*='member'] [class*='container']:has([class*='badges']) {
+  display: none;
+}
+
+/* REMOVE QUICK REACT BAR */
+.button_f7ecac.hoverBarButton_f84418:nth-of-type(1),
+.button_f7ecac.hoverBarButton_f84418:nth-of-type(2),
+.button_f7ecac.hoverBarButton_f84418:nth-of-type(3),
+.separator_f84418 {
+   display: none;
+}
