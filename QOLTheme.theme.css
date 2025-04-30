@@ -2,7 +2,7 @@
  * @name QOL Theme
  * @author Conductor Soren
  * @authorLink https://github.com/Conductor-Soren
- * @version 1.1
+ * @version 1.2
  * @description QOL Minor Tweaks
  * @source https://github.com/Conductor-Soren/DiscordQOLTheme
  * @website https://github.com/Conductor-Soren/DiscordQOLTheme
@@ -286,6 +286,10 @@ span[class*="timestampInline_"] {
   .link__2ea32 {
     padding-left: 20px!important;
   }
+}
+
+.visual-refresh .scroller__99e7c {
+  margin-bottom: 0;
 }
 
 /*Colapisble Panel*/
